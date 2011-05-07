@@ -1,21 +1,22 @@
 %define upstream_name    Data-Entropy
-%define upstream_version 0.006
+%define upstream_version 0.007
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Download entropy from
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.lzma
+Source0:    http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: perl(Carp)
 BuildRequires: perl(Crypt::Rijndael)
 BuildRequires: perl(Data::Float)
 BuildRequires: perl(Errno)
 BuildRequires: perl(Exporter)
+Buildrequires: perl(HTTP::Lite)
 BuildRequires: perl(IO::File)
 BuildRequires: perl(LWP)
 BuildRequires: perl(LWP::UserAgent)
@@ -29,7 +30,6 @@ BuildRequires: perl(strict)
 BuildRequires: perl(warnings)
 BuildRequires: perl(Module::Build::Compat)
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module maintains a concept of a current selection of entropy source.
@@ -62,7 +62,6 @@ required then it is necessary to configure a different entropy source.
 %{make} test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
 %clean
