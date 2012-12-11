@@ -74,3 +74,21 @@ rm -rf %buildroot
 %perl_vendorlib/*
 
 
+
+
+%changelog
+* Sat May 07 2011 Sandro Cazzaniga <kharec@mandriva.org> 0.7.0-1mdv2011.0
++ Revision: 672165
+- new version 0.007
+- clean spec
+- update Source0
+- add a BR on HTTP::Lite
+
+* Sat Apr 16 2011 Funda Wang <fwang@mandriva.org> 0.6.0-2
++ Revision: 653561
+- rebuild for updated spec-helper
+
+* Sat Aug 28 2010 Shlomi Fish <shlomif@mandriva.org> 0.6.0-1mdv2011.0
++ Revision: 573814
+- import perl-Data-Entropy
+
