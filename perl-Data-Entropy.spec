@@ -1,15 +1,15 @@
 %define upstream_name    Data-Entropy
-%define upstream_version 0.007
+%define upstream_version 0.008
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Version:    %{upstream_version}
+Release:    1
 
 Summary:    Download entropy from
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://github.com/robrwo/Data-Entropy
+Source0:    https://cpan.metacpan.org/authors/id/R/RR/RRWO/Data-Entropy-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Carp)
