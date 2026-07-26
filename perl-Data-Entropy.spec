@@ -1,15 +1,13 @@
 %define upstream_name    Data-Entropy
-%define upstream_version 0.008
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    1
+Version:    0.008
+Release:    2
 
 Summary:    Download entropy from
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://github.com/robrwo/Data-Entropy
-Source0:    https://cpan.metacpan.org/authors/id/R/RR/RRWO/Data-Entropy-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/R/RR/RRWO/Data-Entropy-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Carp)
@@ -52,7 +50,7 @@ between parts of the pseudo-entropy stream. If more true entropy is
 required then it is necessary to configure a different entropy source.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
